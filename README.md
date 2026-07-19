@@ -303,3 +303,10 @@ Include screenshots of:
 # License
 
 This project is developed for educational and portfolio purposes. The datasets used are synthetic and simulate an enterprise FMCG retail merger scenario. No proprietary or confidential business data is included.
+
+---
+## 📊 Live Dashboard
+
+Explore the interactive dashboard here:
+
+🔗 (https://dbc-c9b33a49-7383.cloud.databricks.com/dashboardsv3/01f182ecb03b19939dea4d06fadab573/published?o=7474653988214033)
