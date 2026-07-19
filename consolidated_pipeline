@@ -1,2 +1,15 @@
-new-folder/.getkeep
+Consolidation_pipeline
+├── Setup/
+│   ├── Uitilities
+│   ├── setup_catalog
+│   └── dim_date_table_creation
+│
+├── Dimension_data_processing/
+│   ├── 1_customer_data_processing
+│   ├── 2_product_data_processing
+│   └── 3_pricing_data_processing
+│
+├── Fact_data_processing/
+│   ├── 1_full_load_fact
+│   └── 2_incremental_load_fact
 
