@@ -200,52 +200,87 @@ dim_products ─────────► fact_orders ◄───────
 # Repository Structure
 
 ```
-fmcg-retail-merger-lakehouse/
+fmcg-retail-merger-data-engineering/
 │
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
 │
-├── architecture/
-│   ├── enterprise_solution_architecture.png
-│   ├── medallion_architecture.png
-│   ├── star_schema.png
-│   └── project_workflow.png
+├── assets/
+│   ├── dashboards/
+│   │   └── AtliQon_Sales_BI/
+│   │       ├── 01_AtliQon_Sales_BI.png
+│   │       ├── 02_Dashboard.png
+│   │       ├── 03_Dashboard.png
+│   │       ├── 04_Dashboard.png
+│   │       └── 05_Dashboard.png
+│   │
+│   ├── screenshots/
+│   │   ├── pipeline.png
+│   │   ├── medallion.png
+│   │   └── dashboard.png
+│   │
+│   └── architecture/
+│       ├── architecture.png
+│       └── architecture.drawio
 │
-├── data/
-│   ├── company_a/
-│   ├── company_b/
-│   └── README.md
+├── cloud/
+│   └── aws/
+│       └── s3/
+│           ├── bucket_s3.md
+│           └── child_company_dp.md
 │
 ├── notebooks/
-│   ├── 01_data_ingestion.ipynb
-│   ├── 02_bronze_layer.ipynb
-│   ├── 03_silver_layer.ipynb
-│   ├── 04_gold_layer.ipynb
-│   ├── 05_data_quality_checks.ipynb
-│   ├── 06_business_kpis.ipynb
-│   └── 07_genie_demo.ipynb
+│   └── databricks/
+│       ├── 1_Setup/
+│       │   ├── dim_data_table_creation.py
+│       │   ├── setup_catalog.py
+│       │   └── Utilities.py
+│       │
+│       ├── 2_Dimension_data_processing/
+│       │   ├── 1_customer_data_processing.py
+│       │   ├── 2_products_data_processing.py
+│       │   └── 3_pricing_data_processing.py
+│       │
+│       ├── 3_Fact_data_processing/
+│       │   ├── 1_full_load_fact.py
+│       │   └── 2_incremental_load_fact.py
+│       │
+│       ├── 4_gold_layer/
+│       │   └── gold.png
+│       │
+│       ├── 5_silver_layer/
+│       │   └── silver.png
+│       │
+│       └── 6_bronze_layer/
+│           └── bronze.png
 │
-├── sql/
-│   ├── bronze/
-│   ├── silver/
-│   ├── gold/
-│   └── analytics/
+├── data/
+│   ├── parent_company/
+│   │   └── incremental_load/
+│   │       ├── bronze/
+│   │       ├── silver/
+│   │       ├── gold/
+│   │       └── analytics/
+│   │
+│   └── child_company/
+│       ├── bronze/
+│       ├── silver/
+│       ├── gold/
+│       └── analytics/
 │
 ├── src/
-│   ├── ingestion.py
-│   ├── transformation.py
-│   ├── validation.py
-│   ├── data_quality.py
-│   └── utils.py
+│   └── pipeline/
+│       └── medallion.png
 │
-├── dashboard/
-│
-├── genie/
-│
-├── screenshots/
+├── BI/
+│   └── dashboard/
 │
 └── docs/
+    ├── databricks_project.excalidraw
+    ├── medallion_architecture.md
+    └── project_architecture.png
+
 ```
 
 ---
